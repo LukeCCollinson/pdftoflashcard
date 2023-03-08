@@ -16,7 +16,7 @@ def split_string(text):
 
     return [left_text] + split_string(right_text)
 
-with open('sample.pdf', 'rb') as f:
+with open('FILE NAME OF PDF GOES HERE', 'rb') as f:
     pdf = pdftotext.PDF(f)
 
     text = "\n\n".join(pdf)
@@ -27,7 +27,7 @@ overall_response = [""]
 
 
 for part in parts:
-    openai.api_key = "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"
+    openai.api_key = "GET YOUR PRIVATE API KEY FROM OPENAPI"
 
     model_engine = "text-davinci-003"
     prompt = "Using the following provided text, please produce a html table with one column being the question and the other being the answer: " + part
